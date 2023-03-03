@@ -28,7 +28,7 @@ public void ConfigureServices(IServiceCollection services)
     services.AddHangfire(config =>
     {
         ...
-        config.UseDarkDashboard();
+        config.UseCustomTheme(DashboardThemes.Dark); //Select custom theme
     });
 }
 ```
@@ -37,7 +37,7 @@ Otherwise,
 ```c#
 GlobalConfiguration.Configuration
     ...
-    .UseDarkDashboard();
+    ..UseCustomTheme(DashboardThemes.Dark)
 ```
 
 ###After changing themes remember to clear cache (CTRL+F5) otherwise the new css won't load.
