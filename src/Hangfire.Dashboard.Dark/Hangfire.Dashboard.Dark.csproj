@@ -1,23 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Description>Dark themed dashboard for Hangfire</Description>
+    <Description>Makes the 1.8.0 beta 4 dark mode available</Description>
     <AssemblyTitle>Hangfire.Dashboard.Dark</AssemblyTitle>
     <!--<VersionPrefix>2.0.0</VersionPrefix>-->
-    <Authors>vip32</Authors>
+    <Authors>Bruno Rodrigues</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Hangfire.Dashboard.Dark</AssemblyName>
-    <PackageId>Hangfire.Dashboard.Dark</PackageId>
+    <PackageId>rodriGS750.Hangfire.Dashboard.Themes.Dark</PackageId>
     <PackageTags>hangfire;dark;theme;dashboard</PackageTags>
-    <PackageProjectUrl>https://github.com/vip32/Hangfire.Dashboard.Dark</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/sacalata/Hangfire.Dashboard.Dark?organization=sacalata&amp;organization=sacalata</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/vip32/Hangfire.Dashboard.Dark</RepositoryUrl>
+    <RepositoryUrl>https://github.com/sacalata/Hangfire.Dashboard.Dark?organization=sacalata&amp;organization=sacalata</RepositoryUrl>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Version>2.0.4</Version>
+    <Version>1.0.1</Version>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Hangfire.Core" Version="1.7.9" />
+    <PackageReference Include="Hangfire.Core" Version="1.7.33" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
