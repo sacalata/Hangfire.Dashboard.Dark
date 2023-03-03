@@ -40,5 +40,5 @@ GlobalConfiguration.Configuration
     ..UseCustomTheme(DashboardThemes.Dark)
 ```
 
-###After changing themes remember to clear cache (CTRL+F5) otherwise the new css won't load.
+**After changing themes remember to clear cache (CTRL+F5) otherwise the new css won't load.**
 
