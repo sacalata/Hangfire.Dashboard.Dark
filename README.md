@@ -5,8 +5,6 @@
 Uses the hangfire-dark.css available on beta 4. 
 
 ## Features
-
--Todo add screenshot
 ![dashboard1](https://user-images.githubusercontent.com/57366583/222802062-5d42dcb3-ea57-4e1f-afa4-661e7d96b6c6.png)
 
 
