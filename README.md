@@ -1,6 +1,6 @@
 # Hangfire.Dashboard.Dark
 
-[![NuGet](https://img.shields.io/nuget/v/Hangfire.Dashboard.Dark.svg)](https://www.nuget.org/packages/rodriGS750.Hangfire.Dashboard.Themes.Dark/)
+[![NuGet](https://img.shields.io/nuget/v/rodriGS750.Hangfire.Dashboard.Themes.Dark)](https://www.nuget.org/packages/rodriGS750.Hangfire.Dashboard.Themes.Dark/)
 
 Uses the hangfire-dark.css available on beta 4. 
 
