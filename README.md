@@ -30,4 +30,3 @@ GlobalConfiguration.Configuration
     .UseDarkDashboard();
 ```
 
-![dashboard](dashboard2.png)
