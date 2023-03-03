@@ -2,25 +2,51 @@
 using System;
 using System.Reflection;
 
-namespace Hangfire.Dashboard.Dark
+namespace Hangfire.Dashboard.Themes
 {
     /// <summary>
-    /// Provides extension methods to setup Hangfire.Dashboard.Dark
+    /// Enum containing the available theme options for hangfire
+    /// </summary>
+    public enum DashboardThemes
+    {
+        /// <summary>
+        /// Dark theme available in the beta 4 of hangfire
+        /// </summary>
+        Dark,
+        /// <summary>
+        /// Custom transparent dark theme
+        /// </summary>
+        Glass
+    }
+
+    /// <summary>
+    /// Provides extension methods to setup Hangfire.Dashboard
     /// </summary>
     public static class GlobalConfigurationExtensions
     {
         /// <summary>
-        /// Configures Hangfire to use the dark dashboard theme
+        /// Configures Hangfire to a custom theme
         /// </summary>
         /// <param name="configuration">Global configuration</param>
-        public static IGlobalConfiguration UseDarkDashboard(this IGlobalConfiguration configuration)
+        /// <param name="theme">Theme</param>
+        public static IGlobalConfiguration UseCustomTheme(this IGlobalConfiguration configuration, DashboardThemes theme)
         {
             if (configuration == null)
                 throw new ArgumentNullException(nameof(configuration));
 
             // register dispatchers for CSS
             var assembly = typeof(GlobalConfigurationExtensions).GetTypeInfo().Assembly;
-            DashboardRoutes.Routes.Append("/css[0-9]+", new EmbeddedResourceDispatcher(assembly, "Hangfire.Dashboard.Dark.Resources.style.min.css"));
+
+            switch (theme)
+            {
+                case DashboardThemes.Dark:
+                    DashboardRoutes.Routes.Append("/css[0-9]+", new EmbeddedResourceDispatcher(assembly, "Hangfire.Dashboard.Themes.Resources.dark.css"));
+                    break;
+                case DashboardThemes.Glass:
+                    DashboardRoutes.Routes.Append("/css[0-9]+", new EmbeddedResourceDispatcher(assembly, "Hangfire.Dashboard.Themes.Resources.dark.css")); //glass theme uses dark as base
+                    DashboardRoutes.Routes.Append("/css[0-9]+", new EmbeddedResourceDispatcher(assembly, "Hangfire.Dashboard.Themes.Resources.glass.css"));
+                    break;
+            }
 
             return configuration;
         }
