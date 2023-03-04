@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{436BABB0-DBF7-4301-BC7F-CBB9D09FAD36}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Dashboard.Dark", "src\Hangfire.Dashboard.Dark\Hangfire.Dashboard.Dark.csproj", "{3A59F5CD-9081-4FC5-B7D4-90BF7126307A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Dashboard.Themes", "src\Hangfire.Dashboard.Dark\Hangfire.Dashboard.Themes.csproj", "{3A59F5CD-9081-4FC5-B7D4-90BF7126307A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
