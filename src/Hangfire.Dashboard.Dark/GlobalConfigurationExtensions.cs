@@ -1,5 +1,6 @@
 ﻿using Hangfire.Dashboard.Extensions;
 using System;
+using System.IO;
 using System.Reflection;
 
 namespace Hangfire.Dashboard.Themes
@@ -50,5 +51,40 @@ namespace Hangfire.Dashboard.Themes
 
             return configuration;
         }
+
+        /// <summary>
+        /// Adds a custom CSS file to the dashboard layout. The CSS file must be an embedded resource in the specified assembly.
+        /// </summary>
+        /// <param name="configuration">The global configuration.</param>
+        /// <param name="assembly">The assembly that contains the embedded resource.</param>
+        /// <param name="resourceName">The name of the embedded resource.</param>
+        /// <exception cref="ArgumentNullException">Thrown when either the <paramref name="assembly"/> or <paramref name="resourceName"/> parameter is null.</exception>
+        /// <exception cref="ArgumentException">Thrown when the specified resource is not found in the assembly or is not a CSS file.</exception>
+        public static IGlobalConfiguration AddCustomCss(this IGlobalConfiguration configuration, Assembly assembly, string resourceName)
+        {
+            if (string.IsNullOrEmpty(resourceName))
+                throw new ArgumentNullException(nameof(resourceName));
+            if (assembly == null)
+                throw new ArgumentNullException(nameof(assembly));
+
+            var resourceInfo = assembly.GetManifestResourceInfo(resourceName);
+            var extension = Path.GetExtension(resourceName);
+
+            if (resourceInfo == null)
+            {
+                throw new ArgumentException($"Resource '{resourceName}' not found in assembly.");
+            }
+
+            if (!string.Equals(extension, ".css", StringComparison.OrdinalIgnoreCase))
+            {
+                throw new ArgumentException($"Resource '{resourceName}' is not a CSS file.");
+            }
+
+            DashboardRoutes.Routes.Append("/css[0-9]+", new EmbeddedResourceDispatcher(assembly, resourceName));
+            return configuration;
+        }
     }
+
+
+
 }
