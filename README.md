@@ -37,14 +37,14 @@ Otherwise,
 ```c#
 GlobalConfiguration.Configuration
     ...
-    ..UseCustomTheme(DashboardThemes.Theme)
+    .UseCustomTheme(DashboardThemes.Theme)
 ```
 
 And for using custom .css files (must be embedded resource)
 ```c#
 GlobalConfiguration.Configuration
     ...
-    ..AddCustomCss(assembly,"YourAssembly.YourPath.file.css")
+    .AddCustomCss(assembly,"YourAssembly.YourPath.file.css")
 ```
 
 **After changing themes remember to clear cache (CTRL+F5) otherwise the new css won't load.**
