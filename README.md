@@ -2,7 +2,7 @@
 
 [![NuGet](https://img.shields.io/nuget/v/rodriGS750.Hangfire.Dashboard.Themes.Dark)](https://www.nuget.org/packages/rodriGS750.Hangfire.Dashboard.Themes.Dark/)
 
-Enables the usage of predefined custom css for the dashboard.
+Enables the usage of custom css for the dashboard, comes with two predefined themes.
 
 ## Themes
 
@@ -28,7 +28,7 @@ public void ConfigureServices(IServiceCollection services)
     services.AddHangfire(config =>
     {
         ...
-        config.UseCustomTheme(DashboardThemes.Dark); //Select custom theme
+        config.UseCustomTheme(DashboardThemes.Theme); //Select custom theme
     });
 }
 ```
@@ -37,7 +37,14 @@ Otherwise,
 ```c#
 GlobalConfiguration.Configuration
     ...
-    ..UseCustomTheme(DashboardThemes.Dark)
+    .UseCustomTheme(DashboardThemes.Theme)
+```
+
+And for using custom .css files (must be embedded resource)
+```c#
+GlobalConfiguration.Configuration
+    ...
+    .AddCustomCss(assembly,"YourAssembly.YourPath.file.css")
 ```
 
 **After changing themes remember to clear cache (CTRL+F5) otherwise the new css won't load.**
