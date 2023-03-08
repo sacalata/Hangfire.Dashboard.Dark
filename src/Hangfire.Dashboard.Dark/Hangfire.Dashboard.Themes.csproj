@@ -5,7 +5,7 @@
     <AssemblyTitle>Hangfire.Dashboard.Themes</AssemblyTitle>
     <!--<VersionPrefix>2.0.0</VersionPrefix>-->
     <Authors>Bruno Rodrigues</Authors>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard1.3</TargetFramework>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Hangfire.Dashboard.Themes</AssemblyName>
@@ -17,7 +17,7 @@
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Version>1.2.1</Version>
+    <Version>1.2.2</Version>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
