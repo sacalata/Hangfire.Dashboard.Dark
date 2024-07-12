@@ -6,7 +6,7 @@ Enables the usage of custom css for the dashboard, comes with two predefined the
 
 ## Themes
 
-### Dark (by [@odinserj](https://github.com/HangfireIO/Hangfire/blob/master/src/Hangfire.Core/Dashboard/Content/css/hangfire-dark.css))
+### Dark by [@odinserj](https://github.com/HangfireIO/Hangfire/blob/master/src/Hangfire.Core/Dashboard/Content/css/hangfire-dark.css) (Already included in latest version of HangFire)
 ![dashboard1](https://user-images.githubusercontent.com/57366583/222802062-5d42dcb3-ea57-4e1f-afa4-661e7d96b6c6.png)
 ![dashboard2](https://user-images.githubusercontent.com/57366583/222802085-08a14f96-ef34-4ffc-9ccf-55e2d44d7f3c.png)
 
